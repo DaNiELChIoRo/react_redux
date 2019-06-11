@@ -16,10 +16,10 @@ import store from './store';
 // }), {})(App)
 
 export default class App extends Component {
-  render() {
+  render() {    
     return (
       <Provider store={store}>
-        <Root />
+        <Root/>
       </Provider>
     )
   }

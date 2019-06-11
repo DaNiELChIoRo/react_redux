@@ -1,41 +1,51 @@
 import React, { Component } from 'react'
-import {FlatList, StyleSheet, Text, View, Button} from 'react-native'
+import { SafeAreaView, FlatList, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
 import { addTodo } from './actions/todos'
 import { connect } from 'react-redux';
+// import console = require('console');
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
+  container: {
+    flex: 1,
+    backgroundColor: '#F5FCFF',
+  }
+});
+
+handlePress = (info) => {
+  console.log('handlePress!')
+  this.props.navigation.push('Todo', {    
+    title: info.title
+  })
+}
+
+const TodoRow = ({title, onSelect}) => (
+  <TouchableOpacity
+    onPress={onSelect}
+    style={{ 
       alignItems: 'center',
-      backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-      fontSize: 20,
-      textAlign: 'center',
-      margin: 10,
-    },
-    instructions: {
-      textAlign: 'center',
-      color: '#333333',
-      marginBottom: 5,
-    },
-  });
+      backgroundColor: 'red',
+      paddingHorizonta: 25,
+      paddingVertical: 10
+  }}>
+    <Text>{title}</Text>
+  </TouchableOpacity>
+)
 
 const App = (props) => (
-    <View style={styles.container}>
-        <FlatList
-            data={props.todos}
-            renderItem={(item) => <Text>{item.title}</Text>}
-        />
-        <View style={{ flex: 2 }}>
-            <Button title="Add Todo" onPress={() => props.addTodo({
-                title: 'hola'
-            })} />
-        </View>
+  <SafeAreaView style={styles.container}>
+    <FlatList
+      style={{ flex: 7, backgroundColor: 'green'}}
+      data={props.todos}
+      renderItem={({item}) => <TodoRow title={item.title} onSelect={props.handlePress} />}
+    />
+    <View style={{ flex: 2 }}>
+      <Button title="Add Todo" onPress={() => props.addTodo({
+        title: 'hola'
+      })} />
     </View>
+  </SafeAreaView>
 )
 
 export default connect(state => ({
-    todos: state.todos.todos
-}), {addTodo})(App)
+  todos: state.todos.todos
+}), { addTodo })(App)
