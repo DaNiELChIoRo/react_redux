@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SafeAreaView, FlatList, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
+import { SafeAreaView, FlatList, StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'react-native'
 import { addTodo } from './actions/todos'
 import { connect } from 'react-redux';
 
@@ -7,6 +7,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F5FCFF',
+  },
+  inputTextStyle: {
+    height: 40,
+    borderRadius: 20,
+    borderColor: 'gray',
+    borderWidth: 1,
+    paddingTop: 15,
+    marginHorizontal: 45
   }
 });
 
@@ -14,14 +22,15 @@ const TodoRow = ({ title, onPress }) => (
   <TouchableOpacity
     onPress={onPress}
     style={{
+      pading: 15,
       alignItems: 'center',
-      backgroundColor: 'red',
-      paddingHorizonta: 25,
-      paddingVertical: 10
+      backgroundColor: 'red'
     }}>
     <Text>{title}</Text>
   </TouchableOpacity>
 )
+
+state = { text: 'Todo Title' };
 
 const App = (props) => {
   const handlePress = (item) => () => {
@@ -30,7 +39,7 @@ const App = (props) => {
       name: item.title
     })
   }
-
+  
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
@@ -42,6 +51,11 @@ const App = (props) => {
         <Button title="Add Todo" onPress={() => props.addTodo({
           title: 'hola'
         })} />
+        <TextInput
+          style={styles.inputTextStyle}
+          // onChangeText={(text) => state.setState({title: text})}
+          // value={}
+        />
       </View>
     </SafeAreaView>
   )
