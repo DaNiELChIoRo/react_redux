@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>30F1DC1C-35E8-48E0-8A42-72CDFFE56FD9</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>30F1DC1C-35E8-48E0-8A42-72CDFFE56FD9.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>react_redux project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>react_redux</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project react_redux with scheme react_redux and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>582040657.59680605</real>
+			<key>timeStoppedRecording</key>
+			<real>582040682.56611502</real>
+			<key>title</key>
+			<string>Building project react_redux with scheme react_redux and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>30F1DC1C-35E8-48E0-8A42-72CDFFE56FD9</string>
+		</dict>
+		<key>401A775C-6BA8-42CE-841E-2FA79E3548CB</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>401A775C-6BA8-42CE-841E-2FA79E3548CB.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>react_redux project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>react_redux</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project react_redux with scheme react_redux and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>581981606.46906602</real>
+			<key>timeStoppedRecording</key>
+			<real>581981607.63989699</real>
+			<key>title</key>
+			<string>Building project react_redux with scheme react_redux and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>401A775C-6BA8-42CE-841E-2FA79E3548CB</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

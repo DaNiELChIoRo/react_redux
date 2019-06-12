@@ -24,9 +24,10 @@ const TodoRow = ({ title, onPress }) => (
 )
 
 const App = (props) => {
-  const handlePress =  () => {
-    console.log('handlePress function!')
+  const handlePress = (item) => () => {
+    console.log('handlePress function! item:', item.title)
     props.navigation.navigate('TodoView', {
+      name: item.title
     })
   }
 
@@ -35,7 +36,7 @@ const App = (props) => {
       <FlatList
         style={{ flex: 7, backgroundColor: 'green' }}
         data={props.todos}
-        renderItem={({ item }) => <TodoRow title={item.title} onPress={handlePress} />}
+        renderItem={({ item }) => <TodoRow title={item.title} onPress={handlePress(item)} />}
       />
       <View style={{ flex: 2 }}>
         <Button title="Add Todo" onPress={() => props.addTodo({
