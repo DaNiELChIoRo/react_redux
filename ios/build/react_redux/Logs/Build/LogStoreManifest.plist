@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>401A775C-6BA8-42CE-841E-2FA79E3548CB</key>
+		<key>909A0D32-2340-44B3-AB43-522B721F6A0E</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,11 +15,11 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>401A775C-6BA8-42CE-841E-2FA79E3548CB.xcactivitylog</string>
+			<string>909A0D32-2340-44B3-AB43-522B721F6A0E.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>S</string>
+				<string>E</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>react_redux project</string>
@@ -30,13 +30,13 @@
 			<key>signature</key>
 			<string>Building project react_redux with scheme react_redux and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>581981606.46906602</real>
+			<real>582071434.23938096</real>
 			<key>timeStoppedRecording</key>
-			<real>581981607.63989699</real>
+			<real>582071437.00538194</real>
 			<key>title</key>
 			<string>Building project react_redux with scheme react_redux and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>401A775C-6BA8-42CE-841E-2FA79E3548CB</string>
+			<string>909A0D32-2340-44B3-AB43-522B721F6A0E</string>
 		</dict>
 	</dict>
 </dict>

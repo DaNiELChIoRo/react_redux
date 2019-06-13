@@ -2,6 +2,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation'; 
 import Home from './Home';
 import Todo from './Todo';
+import CreateTodo from './CreateTodo';
 
 const AppNavigator = createStackNavigator({
   PantallaPrincipal: {
@@ -9,7 +10,10 @@ const AppNavigator = createStackNavigator({
     },
     TodoView: {
       screen: Todo,
-    },    
+    },
+    CreateTodoView:{
+      screen: CreateTodo,
+    }    
   }, {
     // initialRouteName: 'PantallaPrincipal',
   });

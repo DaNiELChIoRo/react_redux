@@ -39,6 +39,10 @@ const App = (props) => {
       name: item.title
     })
   }
+
+  const openCreateForm = () => {
+    props.navigation.navigate('CreateTodoView')
+  }
   
   return (
     <SafeAreaView style={styles.container}>
@@ -48,14 +52,12 @@ const App = (props) => {
         renderItem={({ item }) => <TodoRow title={item.title} onPress={handlePress(item)} />}
       />
       <View style={{ flex: 2 }}>
-        <Button title="Add Todo" onPress={() => props.addTodo({
-          title: 'hola'
-        })} />
-        <TextInput
+        <Button title="Add Todo" onPress={openCreateForm} />
+        {/* <TextInput
           style={styles.inputTextStyle}
-          // onChangeText={(text) => state.setState({title: text})}
-          // value={}
-        />
+          onChangeText={(text) => state.setState({title: text})}
+          value={}
+        /> */}
       </View>
     </SafeAreaView>
   )
