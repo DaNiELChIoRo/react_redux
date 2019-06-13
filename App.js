@@ -20,9 +20,7 @@ import store from './store';
 export default class App extends Component {
 
   navigate = () => () => {
-    this.props.navigation.push('Todo', {
-      comicId: comic.id,
-      comicTitle: comic.title
+    this.props.navigation.push('Todo', {      
     });
   }
 

@@ -31,32 +31,65 @@ const TodoRow = ({ title, onPress }) => (
 )
 
 state = { text: 'Todo Title' };
+class App extends Component {
+  // const App = (props) => {
 
-const App = (props) => {
-  const handlePress = (item) => () => {
+  state = {
+    todos: {
+      todo: {
+        titile: '',
+        description: ''
+      }
+    }
+  }
+
+  componentDidMount() {
+    this.gettingAllData()
+  }
+
+  componentDidUpdate() {
+    this.gettingAllData()
+  }
+
+  gettingAllData = () => {
+    const url = 'http://localhost:3000/todos'
+    fetch(url).
+      then((res) =>
+        res.json()
+      ).then((data) => {
+        console.log({ data })
+        this.setState({ data })
+      })
+  }
+
+  /*const*/ handlePress = (item) => () => {
     console.log('handlePress function! item:', item.title)
-    props.navigation.navigate('TodoView', {
+    this.props.navigation.navigate('TodoView', {
       name: item.title,
       description: item.description
     })
   }
 
-  const openCreateForm = () => {
-    props.navigation.navigate('CreateTodoView')
+  /*const*/ openCreateForm = () => {
+    this.props.navigation.navigate('CreateTodoView')
   }
-  
-  return (
-    <SafeAreaView style={styles.container}>
-      <FlatList
-        style={{ flex: 7, backgroundColor: 'green' }}
-        data={props.todos}
-        renderItem={({ item }) => <TodoRow title={item.title} onPress={handlePress(item)} />}
-      />
-      <View style={{ flex: 2 }}>
-        <Button title="Add Todo" onPress={openCreateForm} />
-      </View>
-    </SafeAreaView>
-  )
+  render() {
+    console.log('the actual state:', this.state.data)
+    return (
+      <SafeAreaView style={styles.container}>
+        <FlatList
+          style={{ flex: 7, backgroundColor: 'green' }}
+          // data={this.props.data}
+          data={this.state.data}
+          renderItem={({ item }) => <TodoRow title={item.title} onPress={this.handlePress(item)} />}
+          keyExtractor={(item, index) => index.toString()}
+        />
+        <View style={{ flex: 2 }}>
+          <Button title="Add Todo" onPress={this.openCreateForm} />
+        </View>
+      </SafeAreaView>
+    )
+  }
 }
 
 export default connect(state => ({
