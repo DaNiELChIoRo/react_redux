@@ -8,9 +8,8 @@ app.use(bodyParser.json())
 let db = []
 
 app.post('/todos/create', (req, res) => {
-   const item = { title: req.body.title }
+   const item = { title: req.body.title, description: req.body.description }
    console.log(item)
-   console.log(req.body)
     db.push(item)
     res.json(item)
   })

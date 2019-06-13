@@ -66,7 +66,7 @@ class CreateTodoView extends Component {
                     console.log('button press is going to add ', this.state.txto)
                     this.props.addTodo({
                         title: this.state.txto,
-                        // description: this.state.descript
+                        description: this.state.descript
                     })
                 }} />
             </View>

@@ -6,13 +6,12 @@ import store from './store';
 export default class Todo extends Component {
 
     state = {
-        something: ''
+        something: '',        
     }
 
     componentDidMount() {
-        const something = this.props.navigation.getParam('name', 'deafult name');
-        this.setState({something})
-        console.log(something)
+        const description = this.props.navigation.getParam('description');
+        this.setState({description})        
     }
 
     static navigationOptions = ({navigation}) => ({
@@ -29,7 +28,7 @@ export default class Todo extends Component {
                     paddingTop: h / 3,
                     alignItems: 'center'
                 }}>
-                <Text>{'Algo'}</Text>
+                <Text>{this.state.description}</Text>
             </View>
         )
     }

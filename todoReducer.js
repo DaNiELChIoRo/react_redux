@@ -10,7 +10,10 @@ export default (state = INITIAL_STATE, action) => {
         case ADD_TODO:
             return {
                 ...state,
-                todos: [...state.todos, { title: action.payload.title}]
+                todos: [...state.todos, { 
+                    title: action.payload.title,
+                    description: action.payload.description
+                }]
             }
         default:
             return state;

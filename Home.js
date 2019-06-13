@@ -36,7 +36,8 @@ const App = (props) => {
   const handlePress = (item) => () => {
     console.log('handlePress function! item:', item.title)
     props.navigation.navigate('TodoView', {
-      name: item.title
+      name: item.title,
+      description: item.description
     })
   }
 
@@ -53,11 +54,6 @@ const App = (props) => {
       />
       <View style={{ flex: 2 }}>
         <Button title="Add Todo" onPress={openCreateForm} />
-        {/* <TextInput
-          style={styles.inputTextStyle}
-          onChangeText={(text) => state.setState({title: text})}
-          value={}
-        /> */}
       </View>
     </SafeAreaView>
   )
