@@ -9,6 +9,8 @@ let db = []
 
 app.post('/todos/create', (req, res) => {
    const item = { title: req.body.title }
+   console.log(item)
+   console.log(req.body)
     db.push(item)
     res.json(item)
   })

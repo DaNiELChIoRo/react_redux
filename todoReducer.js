@@ -5,7 +5,8 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
-    switch (action.type) {
+    // alert('inside ', action.payload.title)
+    switch (action.type) {        
         case ADD_TODO:
             return {
                 ...state,

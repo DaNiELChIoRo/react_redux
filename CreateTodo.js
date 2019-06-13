@@ -25,10 +25,27 @@ const styles = StyleSheet.create({
         marginHorizontal: 45,
         marginBottom: 15,
         textAlign: 'center'
+    },
+    detailInputTextStyle: {
+        width: w - (w/5),
+        height: 40 * 2,
+        borderRadius: 12,
+        borderColor: 'gray',
+        borderWidth: 1,
+        paddingTop: 15,
+        marginHorizontal: 45,
+        marginBottom: 15,
+        textAlign: 'center'
     }
 })
 
 class CreateTodoView extends Component {
+
+    state={
+        txto: '',
+        descript: ''
+    }
+
     render() {
         return (
             <View
@@ -41,11 +58,15 @@ class CreateTodoView extends Component {
                     style={styles.inputTextStyle}
                     placeholder="Title" onChangeText={(txto) => { this.setState({ txto }) }} />
                 <TextInput
-                    style={styles.inputTextStyle}
-                    placeholder="Description" onChangeText={(descript) => { this.setState({ descript }) }} />
+                    style={styles.detailInputTextStyle}
+                    multiline={true}
+                    editable={true}
+                    placeholder="Description" onChangeText={(descript) => { this.setState({ descript }) }} />                
                 <Button title="Submit" onPress={() => {
+                    console.log('button press is going to add ', this.state.txto)
                     this.props.addTodo({
-                        title: this.state.txto
+                        title: this.state.txto,
+                        // description: this.state.descript
                     })
                 }} />
             </View>
