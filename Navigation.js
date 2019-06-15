@@ -1,8 +1,8 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation'; 
-import Home from './Home';
-import Todo from './Todo';
-import CreateTodo from './CreateTodo';
+import Home from './screens/Home';
+import Todo from './screens/Todo';
+import CreateTodo from './screens/CreateTodo';
 
 const AppNavigator = createStackNavigator({
   PantallaPrincipal: {
